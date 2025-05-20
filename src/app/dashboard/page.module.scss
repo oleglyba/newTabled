@@ -1,0 +1,15 @@
+.page {
+  display: flex;
+  min-height: 100vh;
+}
+
+.mainContent {
+  flex-grow: 1;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center; /* горизонтально */
+  align-items: center;     /* вертикально */
+  padding: 24px;
+  text-align: center;
+  flex-direction: column;
+}
