@@ -1,0 +1,200 @@
+/* src/components/AccountContent/AccountContent.module.scss */
+
+.contentArea {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px;
+  gap: 16px;
+  width: 963px;
+  max-width: 100%;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: #E7E7E7;
+}
+
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.infoRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 40px;
+}
+
+.label {
+  font-family: 'Outfit';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  color: #171717;
+}
+
+.description {
+  font-family: 'Outfit';
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 130%;
+  color: #5C5C5C;
+  margin-top: 4px;
+}
+
+/* Avatar container */
+.avatarWrapper {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  background: #FFFFFF;
+  border: 1px solid #41BD73;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+
+}
+
+.avatarImage {
+  width: 56px;
+  height: 56px;
+  border-radius: 100px;
+  object-fit: cover;
+}
+
+/* Edit button */
+.editButton {
+  position: absolute;
+  left: 32px;
+  top: 32px;
+  width: 40px;
+  height: 40px;
+  padding: 4px;
+  background: #FFFFFF;
+  border: none;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.iconWrapper {
+  display: flex;
+  width: 32px;
+  height: 32px;
+  padding: 8px;
+  border-radius: 32px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.iconWrapper svg {
+
+  position: absolute;
+  left: calc(50% - 8px);
+  top: calc(50% - 8px);
+}
+
+.inputField,
+.selectField {
+  width: 457.5px;
+  height: 40px;
+  padding: 0 8px;
+  font-family: 'Outfit';
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 130%;
+  color: #171717;
+  background: #FFFFFF;
+  border: 1px solid #E7E7E7;
+  border-radius: 8px;
+}
+
+.changePassword {
+  background: none;
+  border: none;
+  color: #41BD73;
+  font-family: 'Outfit';
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.notifications {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+/* Toggle switch */
+.toggle {
+  width: 38px;
+  height: 24px;
+  border-radius: 16px;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.on {
+  background: #41BD73;
+  justify-content: flex-end;
+}
+
+.off {
+  background: #F5F5F5;
+  justify-content: flex-start;
+}
+
+.knob {
+  width: 20px;
+  height: 20px;
+  background: #FFFFFF;
+  border-radius: 50%;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s;
+}
+
+.deleteRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.deleteButton {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 16px;
+  background: #F5F5F5;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.deleteIcon {
+  stroke: #E82C49;
+}
+
+.deleteText {
+  font-family: 'Outfit';
+  font-weight: 500;
+  font-size: 18px;
+  color: #E82C49;
+}

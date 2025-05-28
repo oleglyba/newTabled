@@ -1,0 +1,50 @@
+@use '../../../../style/shared' as *;
+
+
+.inviteBtn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: #41BD73;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  color: #fff;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: #38a165;
+  }
+
+  svg {
+    stroke: #fff;
+  }
+}
+
+
+.emptyState {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #E7E7E7;
+  background: #fff;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 931px;
+  height: 100%;
+  gap: 16px;
+}
+
+.emptyText {
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 120%;
+  color: #5C5C5C;
+  text-align: center;
+}

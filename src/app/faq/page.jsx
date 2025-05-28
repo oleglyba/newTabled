@@ -1,7 +1,7 @@
 import React from 'react'
-import Sidebar from '@/app/components/Sidebar/Sidebar'
 import styles from './page.module.scss'
 import { HiChevronDown } from 'react-icons/hi'
+import Sidebar from "@/app/components/sidebar/page";
 
 // Список питань (може містити дублікати)
 const QUESTIONS = [

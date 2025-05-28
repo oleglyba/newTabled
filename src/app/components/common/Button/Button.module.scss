@@ -1,0 +1,25 @@
+.button {
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.default {
+  background: #F5F5F5;
+  color: #171717;
+}
+
+.primary {
+  background: #B3E4C7;
+  color: #fff;
+}
+
+.danger {
+  background: #E82C49;
+  color: #fff;
+}

@@ -1,0 +1,122 @@
+.infoRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  gap: 16px;
+  height: 40px;
+}
+
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  width: 457.5px;
+  height: 39px;
+}
+
+.infoTitle {
+  font-family: 'Outfit';
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 130%;
+  color: #171717;
+  height: 21px;
+}
+
+.infoDescription {
+  font-family: 'Outfit';
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 130%;
+  color: #5C5C5C;
+  height: 18px;
+}
+
+.tertiaryButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  width: 192px;
+  height: 32px;
+  border-radius: 6px;
+  border: none;
+  background: transparent;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.iconWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+}
+
+.iconNotFound {
+  width: 32px;
+  height: 40px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.buttonText {
+  width: 152px;
+  height: 18px;
+  font-family: 'Outfit';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 130%;
+  display: flex;
+  align-items: center;
+  color: #171717;
+}
+
+
+.historyTitle {
+  font-family: 'Outfit';
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 130%;
+  color: #171717;
+  height: 21px;
+  //margin-bottom: 16px;
+}
+
+.billingHistory {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  gap: 16px;
+  width: 931px;
+  height: 526px;
+  background: #FFFFFF;
+  border: 1px solid #E7E7E7;
+  border-radius: 16px;
+}
+
+
+.noInvoicesText {
+  font-family: 'Outfit';
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 120%;
+  text-align: center;
+  color: #5C5C5C;
+}

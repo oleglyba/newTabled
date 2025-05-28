@@ -1,61 +1,35 @@
+@use '../style/shared' as *;
+
 .page {
   display: flex;
   min-height: 100vh;
 }
 
 .contentArea {
-  /* Відступ зліва під сайдбар */
-  margin-left: 253px;
-  /* Ширина під решту екрану */
-  width: calc(100% - 253px);
-
-  /* Центруємо контент по горизонталі */
-  display: flex;
-  justify-content: center;
-
-  padding: 16px;
-  background: #F5F5F5; /* Black/Black 5 */
-  overflow-y: auto;
+  @extend .pageContent;
 }
 
 .card {
-  width: 100%;
-  max-width: 800px;
-  background: #FFFFFF;           /* Primary/White 100 */
-  border: 1px solid #E7E7E7;     /* Black/Black 10 */
-  border-radius: 16px;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
+  @extend .cardMedium;
 }
 
 .faqCard {
-  border-bottom: 1px solid #E7E7E7; /* Black/Black 10 */
-  padding: 16px;
-}
-
-.faqCard:last-of-type {
-  border-bottom: none;
+  @extend .cardSection;
 }
 
 .question {
+  @extend .textQuestion;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 16px;
-  font-weight: 600;
-  color: #171717; /* Primary/Black 90 */
   cursor: pointer;
 }
 
 .toggleIcon {
-  font-size: 20px;
-  color: #737373; /* Black/Black 50 */
+  @extend .iconToggle;
 }
 
 .answer {
+  @extend .textAnswer;
   margin-top: 8px;
-  font-size: 14px;
-  color: #4A5568;
-  line-height: 1.5;
 }

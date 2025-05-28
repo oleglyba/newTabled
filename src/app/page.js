@@ -1,6 +1,6 @@
 // src/app/page.js
-import Sidebar from '@/app/components/Sidebar/Sidebar'
 import styles from './page.module.css'
+import Sidebar from "@/app/components/sidebar/page";
 
 export default function Page() {
     return (

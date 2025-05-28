@@ -1,42 +1,62 @@
+/* globals.scss */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --input-height: 40px;
+  --input-radius: 8px;
+  --input-border: 1px solid #E7E7E7;
+  --input-padding-vertical: 0;
+  --input-padding-horizontal: 8px;
+  --form-field-gap: 4px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      gap: var(--form-field-gap);
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+    height: var(--input-height);
+      padding: var(--input-padding-vertical) var(--input-padding-horizontal);
+      border: var(--input-border);
+      border-radius: var(--input-radius);
+      background: #fff;
+      font-family: 'Outfit', sans-serif;
+      font-size: 16px;
+      line-height: 130%;
+      color: #171717;
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+
+/*input::placeholder,*/
+/*textarea::placeholder {*/
+/*  color: #A0A0A0;*/
+/*}*/
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #41BD73; /* можна ваш колір фокусу */
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}
+    select {
+      appearance: none;
+      background-image: url("data:image/svg+xml;charset=US-ASCII,\
+%3Csvg%20width='10'%20height='5'%20viewBox='0%200%2010%205'\
+%20xmlns='http://www.w3.org/2000/svg'%3E%3Cpath%20d='M0%200l5%205%205-5z'\
+%20fill='%23666'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right var(--input-padding-horizontal) center;
+      background-size: 10px 5px;
+      padding-right: calc(var(--input-padding-horizontal) + 10px + 4px);
+    }

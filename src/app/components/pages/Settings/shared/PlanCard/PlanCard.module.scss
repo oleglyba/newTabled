@@ -1,0 +1,209 @@
+// PlanCard.module.scss
+
+.planCardsWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  width: 931px;
+  height: 511.5px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px;
+  gap: 16px;
+  background: #fff;
+  border: 1px solid #E7E7E7;
+  border-radius: 8px;
+  width: 220px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.selected {
+  border-color: #41BD73;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 188.75px;
+  height: 129px;
+}
+
+.name {
+  font-size: 16px;
+  font-weight: 500;
+  color: #171717;
+  width: 188.75px;
+  height: 19px;
+}
+
+.priceRow {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: 600;
+  color: #171717;
+}
+
+.note {
+  font-size: 12px;
+  font-weight: 300;
+  color: #E82C49;
+  line-height: 140%;
+}
+
+.button {
+  background: #F5F5F5;
+  color: #171717;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  width: 188.75px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.divider {
+  height: 1px;
+  background: #E7E7E7;
+  width: 188.75px;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 188.75px;
+}
+
+.feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 300;
+  color: #171717;
+}
+
+.check {
+  color: #171717;
+}
+
+.tag {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 4px;
+  position: absolute;
+  width: 86px;
+  height: 24px;
+  right: 15.75px;
+  top: 16px;
+  background: #F5FCF8;
+  border: 1px solid #B3E4C7;
+  border-radius: 40px;
+  z-index: 0;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 4px;
+  gap: 2px;
+  width: 78px;
+  height: 24px;
+}
+
+.iconWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  width: 16px;
+  height: 16px;
+}
+
+.iconBody {
+  width: 12px;
+  height: 12px;
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #41BD73;
+  border-radius: 50%;
+}
+
+.tagTextWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 2px;
+  gap: 10px;
+  width: 52px;
+  height: 22px;
+}
+
+.tagText {
+  width: 48px;
+  height: 18px;
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 130%;
+  display: flex;
+  align-items: center;
+  color: #0D2517;
+}
+
+.darkCard {
+  background: linear-gradient(205.9deg, #171717 11.21%, #0D2517 88.79%);
+  border: 1px solid #E7E7E7;
+
+  .name,
+  .price,
+  .feature,
+  .check {
+    color: #FFFFFF;
+  }
+
+  .divider {
+    background: #133822;
+  }
+
+  .button {
+    background: #41BD73;
+    color: #ffffff;
+  }
+
+  .tag {
+    background: #F5FCF8;
+    border: 1px solid #B3E4C7;
+    color: #0D2517;
+  }
+}

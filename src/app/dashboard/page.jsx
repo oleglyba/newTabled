@@ -2,7 +2,7 @@
 
 import React from 'react'
 import styles from './page.module.scss'
-import Sidebar from "@/app/components/Sidebar/Sidebar"; // Стилі для dashboard сторінки
+import Sidebar from "@/app/components/sidebar/page"; // Стилі для dashboard сторінки
 
 const DashboardPage = () => {
     return (

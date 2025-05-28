@@ -1,3 +1,5 @@
+@use '../../style/shared' as *;
+
 .sidebar {
   position: fixed;
   top: 0;
@@ -7,7 +9,6 @@
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
-  /* removed justify-content:space-between to allow menu to flex */
   padding: 16px;
   border-right: 1px solid #E7E7E7;
   z-index: 100;
@@ -66,35 +67,42 @@
   display: flex;
   flex-direction: column;
   gap: 2px;
-  /* allow menu to grow and push bottom items down */
   flex: 1 1 auto;
   overflow-y: auto;
 }
 
 .menuItem {
-  display: flex;
-  align-items: center;
+  @extend .buttonTabBase;
   gap: 8px;
-  height: 40px;
-  padding: 8px;
-  border-radius: 8px;
   color: #333;
+  text-decoration: none;
+
+  /* Скидаємо дефолт кнопки */
+  background: transparent;
+  border: none;
+  appearance: none;
   cursor: pointer;
-  transition: background-color 0.2s;
+
+  /* Тепер hover і active працюють на єдиному фоні */
+  &:hover {
+    background-color: #F5F5F5;
+  }
 }
 
-.menuItem:hover {
-  background-color: #F5F5F5;
+.active {
+  background-color: #F5FCF8;
+  border: 1px solid #B3E4C7;
+  color: #2F855A;
 }
-
 .icon {
+  @extend .svgIcon;
   font-size: 18px;
-  flex-shrink: 0;
 }
 
-.subIcon {
-  margin-left: auto;
-  font-size: 16px;
+
+
+.activeIcon {
+  @extend .activeIcon;
 }
 
 .bottomMenu {
@@ -103,22 +111,6 @@
   gap: 2px;
   margin-bottom: 15px;
 }
-
-.active {
-  background-color: #F5FCF8;
-  border: 1px solid #B3E4C7;
-  color: #2F855A;
-}
-.activeIcon {
-  filter: brightness(0) saturate(100%) invert(63%) sepia(30%) saturate(847%) hue-rotate(90deg) brightness(93%) contrast(89%);
-}
-
-
-.bottomMenu .menuItem.active .icon {
-  color: #2F855A;
-}
-
-
 
 .avatar {
   width: 32px;
@@ -131,6 +123,37 @@
   display: flex;
   flex-direction: column;
 }
+
+.profile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  border-top: 1px solid #E7E7E7;
+  margin-top: auto;
+}
+
+.profileLeft {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  color: #333;
+}
+
+.role {
+  font-size: 12px;
+  line-height: 14px;
+  color: #999;
+  margin-top: 2px;
+}
+
 .moreButton {
   display: flex;
   justify-content: center;
@@ -145,11 +168,10 @@
 }
 
 .subIcon {
-  /* remove any forced width/height so the size prop can work */
   width: 24px;
   height: 24px;
-  padding: 0;
   margin-left: auto;
+  padding: 0;
   cursor: pointer;
   transition: transform 0.2s;
   color: #737373;
@@ -157,37 +179,11 @@
   align-items: center;
   justify-content: center;
 }
-.profile {
-  position: relative;       /* ← ДОДАЙТЕ ЦЕ */
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 8px;
-  border-top: 1px solid #E7E7E7;
-  margin-top: auto;
-}
-.profileLeft {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.name {
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 16px;
-  color: #333;
-}
 
-.role {
-  font-size: 12px;
-  line-height: 14px;
-  color: #999;
-  margin-top: 2px;
-}
-/* Dropdown styles */
+/* Dropdown */
 .dropdown {
   position: absolute;
-  bottom: calc(100% + 4px);
+  bottom: 35px;
   right: 0;
   display: flex;
   flex-direction: column;
@@ -211,6 +207,7 @@
   cursor: pointer;
   transition: background-color 0.2s;
 }
+
 .dropdownItem:hover {
   background-color: #F5F5F5;
 }
@@ -236,7 +233,7 @@
   color: #E82C49;
 }
 
-/* Drop-Down List (Figma spec) */
+/* Dropdown List Items */
 .dropdownList {
   box-sizing: border-box;
   display: flex;
@@ -258,7 +255,7 @@
   flex-direction: column;
   align-items: flex-start;
   padding: 0;
-  gap: 8px; /* збільшений інтервал між пунктами */
+  gap: 8px;
   width: 152px;
 }
 
@@ -273,6 +270,7 @@
   cursor: pointer;
   transition: background-color 0.2s;
 }
+
 .dropdownListItem:hover {
   background-color: #F5F5F5;
 }
